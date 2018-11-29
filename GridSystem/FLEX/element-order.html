@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Element Order</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: #eee;
+		}
+		.wrapper {
+			width: 100%;
+			max-width: 960px;
+			margin: 0 auto;
+		}
+		.block{
+			display: flex;
+			justify-content: space-between;
+			margin: 10px;
+		}
+		.block div{
+			flex: 0 0 100px;
+			background-color: pink;
+			padding: 40px 0;
+			text-align: center;
+		}
+		.one{order: 0}
+		.two{order: -1}
+		.three{order: 3}
+		.four{order: 1}
+		
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<section class="block">
+			<div class="one">1</div>
+			<div class="two">2</div>
+			<div class="three">3</div>
+			<div class="four">4</div>
+		</section>
+	</div>
+</body>
+</html>

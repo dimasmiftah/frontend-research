@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Menu with Flexbox</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: #eee;
+		}
+		.wrapper {
+			width: 100%;
+			max-width: 960px;
+			margin: 0 auto;
+		}
+		nav{
+			background: #333;
+		}
+		nav ul{
+			list-style: none;
+		}
+		nav a{
+			display: block;
+			color: white;
+			padding: 10px;
+			text-decoration: none;
+			/*background-color: #777;*/
+		}
+		nav a:hover{
+			background-color: #555;
+		}
+		@media screen and (min-width: 668px) {
+			nav ul{
+				display: flex;
+				/*justify-content: center;*/
+				/*justify-content: flex-end;*/
+				justify-content: flex-start;
+				/*justify-content: space-around;*/
+				/*justify-content: space-between;*/
+			}
+			nav li{
+				flex: 1 1 0;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<nav>
+			<ul>
+				<li><a href="">Home</a></li>
+				<li><a href="">About</a></li>
+				<li><a href="">Store</a></li>
+				<li><a href="">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+</body>
+</html>

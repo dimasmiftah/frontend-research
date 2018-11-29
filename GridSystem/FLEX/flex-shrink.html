@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flex Shrink</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: #eee;
+		}
+		.wrapper {
+			width: 100%;
+			max-width: 960px;
+			margin: 0 auto;
+		}
+		.flex-container{
+			border: 5px solid black;
+			display: flex;
+		}
+		.box{
+			height: 100px;
+			width: 320px;
+		}
+		.one{
+			background-color: pink;
+			flex-shrink: 3;
+		}
+		.two{
+			background-color: lightblue;
+			flex-shrink: 2;
+		}
+		.three{
+			background-color: magenta;
+			flex-shrink: 1;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="flex-container">
+			<div class="box one"></div>
+			<div class="box two"></div>
+			<div class="box three"></div>
+		</div>
+	</div>
+</body>
+</html>

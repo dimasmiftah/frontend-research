@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Nested Menu with Flexbox</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: #eee;
+		}
+		.wrapper {
+			width: 100%;
+			max-width: 960px;
+			margin: 0 auto;
+		}
+		nav{
+			background: #333;
+			text-align: center;
+		}
+		nav ul{
+			list-style: none;
+		}
+		nav a{
+			display: block;
+			color: white;
+			padding: 10px;
+			text-decoration: none;
+			/*background-color: #777;*/
+		}
+		nav a:hover{
+			background-color: #555;
+		}
+
+		/*Social Menu*/
+		.tw {
+			background: url(img/tw.png) no-repeat center;
+			background-size: 80%;
+		}
+		.fb {
+			background: url(img/fb.png) no-repeat center;
+			background-size: 80%;
+		}
+		.social{
+			text-indent: -10000px;
+		}
+
+		.social{
+			max-width: 80px;
+			margin: 0 auto;
+		}
+
+		/*Flex Style*/
+		nav ul.social{
+			flex: 1 1 0;
+			display: flex;
+		}
+		nav ul.social li{
+			flex: 1 1 0;
+		}
+		@media screen and (min-width: 668px) {
+			nav ul{
+				display: flex;
+				/*justify-content: center;*/
+				/*justify-content: flex-end;*/
+				justify-content: flex-start;
+				/*justify-content: space-around;*/
+				/*justify-content: space-between;*/
+			}
+			nav li{
+				flex: 1 1 0;
+			}
+			nav{
+				display: flex;
+				justify-content: space-between;
+			}
+			.social{
+			margin: 0;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<nav>
+			<ul>
+				<li><a href="">Home</a></li>
+				<li><a href="">About</a></li>
+				<li><a href="">Store</a></li>
+				<li><a href="">Contact</a></li>
+			</ul>
+
+			<ul class="social">
+				<li><a href="" class="fb">Twitter</a></li>
+				<li><a href="" class="tw">Facebook</a></li>
+			</ul>
+		</nav>
+	</div>
+</body>
+</html>
