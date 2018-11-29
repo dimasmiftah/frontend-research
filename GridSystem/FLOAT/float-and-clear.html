@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Floating Element</title>
+	<style>
+		body{
+			background: #eee;
+			font-family: "Open Sans";
+		}
+		.wrapper{
+			background: #fff;
+			max-width: 960px;
+			padding: 20px;
+			margin: 0 auto;
+		}
+		.wrapper:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.service h2, .service p{
+			color: #999;
+		}
+		.service{
+			text-align: center;
+			float: left;
+			background: #eee;
+			width: 29.33%;
+			padding: 1%;
+			margin: 1%;
+			height: 140px;
+		}
+		.services:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.content{
+			padding: 10px;
+			margin: 20px 1%;
+		}
+		section, aside{
+			float: left;
+			width: 45%;
+			margin: 1%;
+			padding: 1%;
+			background-color: #f2f2f2;	
+		}
+		.columns:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="services">
+			<div class="service">
+				<h2>Service 1</h2>
+				<p>This is Service 1</p>
+			</div>
+			<div class="service">
+				<h2>Service 2</h2>
+				<p>This is Service 2</p>
+			</div>
+			<div class="service">
+				<h2>Service 3</h2>
+				<p>This is Service 3</p>
+			</div>
+		</div>
+		<div class="content">
+			<h2>Hello!</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quo, expedita molestiae suscipit, quidem facilis cumque possimus earum maxime ea, officia sunt quas, autem ad! Inventore facere eaque nihil porro?</p>
+		</div>
+		<div class="columns">
+			<section>
+				<h2>This is column 1</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, perspiciatis, officiis! Nesciunt culpa aspernatur voluptas mollitia veniam, sed, eum. Odio sit ad voluptate saepe possimus, id consequatur dolores accusantium debitis. Iure, consequuntur, harum. Ut eaque necessitatibus, dolore id incidunt facilis quidem possimus quasi! Illo perspiciatis soluta repellat, quas consectetur ex! 
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod voluptas magnam necessitatibus, expedita quis alias nemo non suscipit debitis laudantium quaerat aliquam pariatur, provident nostrum voluptatem, beatae ipsam quia nobis quidem cupiditate veniam in saepe. Magnam porro, in illo dolores sed officia eius officiis dolor quaerat perferendis repudiandae magni dignissimos.</p>
+			</section>
+			<aside>
+				<h2>This is column 2</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ea qui vero unde molestias doloremque pariatur totam facilis aliquam, odio, molestiae nulla. Est corporis quos id deleniti sequi veniam, praesentium cupiditate. Alias adipisci, velit perferendis unde, incidunt quo quam obcaecati quidem atque laudantium, voluptates cum voluptatibus repellendus! Quidem, in similique?</p>
+				<img src="img/cloud.jpg" alt="Cloud" width="100%">
+			</aside>
+		</div>
+	</div>
+</body>
+</html>
