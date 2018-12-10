@@ -1,0 +1,320 @@
+@media screen and (max-width: 422px) {
+
+	/*-------------------------------------------------------------
+	-----------------------------NAVBAR--------------------------
+	-------------------------------------------------------------*/
+	#navbar {
+		height: 50px;
+		display: flex;
+		justify-content: space-between;
+		padding: 10px 10px;
+		box-sizing: border-box;	
+		z-index: 1000;
+		overflow: hidden;
+	}
+	#navbar ul{
+		display: flex;
+	}
+	#navbar ul a {
+		text-decoration: none;
+		color: white;
+		font-weight: bold;
+		font-size: 11px;
+		transition: .2s;
+	}
+	#navbar ul.menu li{
+		margin-right: 20px;  
+	}
+	#navbar ul a:hover, a:active{
+		font-weight: normal;
+		color: #ED145B; 
+	}
+	ul .active{
+		color: #ED145B; 
+		font-weight: normal;
+	}
+	.cakar{
+		color: #ED145B;
+	}
+
+	/*-------------------------------------------------------------
+	-----------------------------HEADER--------------------------
+	-------------------------------------------------------------*/ 
+	header{
+		padding: 130px 50px;
+	}
+	header h1{
+		font-size: 30px;
+		letter-spacing: 3px;
+		line-height: 35px;
+	}
+	header hr{
+		margin-bottom: 40px;
+		width: 100px;
+	}
+	hr{
+		width: 100px;
+	}
+	header p{
+		font-size: 14px;
+	}
+	button{
+		width: 125px;
+		height: 30px;
+		margin-top: 40px;
+	} 
+	/*-------------------------------------------------------------
+	-----------------------------ABOUT--------------------------
+	-------------------------------------------------------------*/ 
+	.about{
+		height: 700px;
+	}
+	.miring{
+		transform: rotate(-1.2deg);
+		margin-top: -45px;
+	}
+	.konten{
+		display: block;
+		padding: 50px 50px;
+		margin: 0;
+		height: 100%;
+		margin-top: 270px;
+		text-align: center;
+	}
+	.tulisan{
+		margin: 0 auto;
+		width: 100%;
+		height: auto;
+	}
+	section h1{
+		font-size: 25px;
+	}
+	.tulisan p{
+		line-height: 20px;
+		font-size: 14px;
+		text-align: justify;
+	}
+	.tulisan hr{
+		margin: 20px auto;
+	}
+	.tulisan a{
+		font-size: 14px;
+		display: block;
+	}
+	.tulisan img{
+		width: 23px;
+		position: absolute;
+		left: 140px;
+		top: 30px;
+
+	}
+	/*-------------------------------------------------------------
+	-----------------------------OUR SERVICES----------------------
+	-------------------------------------------------------------*/
+	.services{
+		height: 730px;
+		padding: 50px;
+	}
+	.gambar{
+		position: absolute;	
+		right: 0;
+		top: -630px;
+		right: 20px;
+	}
+	.services .gambar img{
+		width: 350px;
+	}
+	.services p {
+		width: 300px;
+		margin: 0 auto;
+		line-height: 20px;
+		font-size: 14px;
+		text-align: justify;
+	}
+	.services .wadahbulet{
+		width: 100%;
+		height: 600px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3,1fr);
+		grid-gap: 0px;
+		margin-top: 20px;
+	}
+	.wadahbulet .kotak{
+		width: 100%;
+	}
+	.kotak h3 {
+		font-size: 14px;
+	}
+	/*-------------------------------------------------------------
+	-----------------------------QUOTE----------------------
+	-------------------------------------------------------------*/
+	.quote{
+		height: 350px;
+	}
+	.tandapetik{
+		width: 35px;
+	}
+	.quote .kiri{
+		width: 10px;
+	}
+	.quote .kanan{
+		width: 10px;
+	}
+	.kutipan{
+		height: 100%;
+		width: 80%;
+		top: 64%;
+	}
+	.kutipan p{
+		margin: 20px 0;
+		font-size: 15px;
+	}
+	/*-------------------------------------------------------------
+	-----------------------------PRIZES----------------------
+	-------------------------------------------------------------*/
+	.prizes{
+		height: 1950px;
+		padding: 50px;
+	}
+	.deskripsi{
+		width: 100%;
+		font-size: 14px;
+	}
+	.bungkusharga{
+		width: 100%;
+		height: 1550px;
+		flex-direction: column;
+		align-items: center;
+	}
+	.harga{
+		background: white;
+		height: 350px;
+		width: 190px;
+	}
+	.judul{
+		height: 100px;
+		background-color: #5A5A5A;
+		padding: 15px;
+	}
+	.harga button{
+		margin-top: 20px;
+	}
+	/*-------------------------------------------------------------
+	-----------------------------INFO ----------------------
+	-------------------------------------------------------------*/
+	.addinfo{
+		height: auto;
+		padding: 50px;
+	}
+	.wadahinfo{
+		width: 100%;
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 50px;
+	}
+	.info h3{
+		font-size: 14px;
+	}
+	.info  p{
+		font-size: 14px;
+		color: #5A5A5A;
+		line-height: 20px;
+	}
+	/*-------------------------------------------------------------
+	-----------------------------JOIN US ----------------------
+	-------------------------------------------------------------*/
+	.join{
+		height: auto;
+		padding: 30px 50px;
+	}
+	.join span{
+		font-size: 23px;
+		line-height: 30px;
+		display: block;
+		margin: 0;
+		margin-bottom: 20px;
+	}
+	.join button{
+		margin: 0 auto;
+	}
+	.join button:hover{
+		background: black;
+		color: white;
+	}
+	/*-------------------------------------------------------------
+	-----------------------------NEWS ----------------------
+	-------------------------------------------------------------*/
+	.news{
+		height: 2850px;
+		padding:50px;
+	}
+	.wadahberita{
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		grid-gap: 50px;
+	}
+	.berita h3{
+		font-size: 14px;
+	}
+	.berita p{
+		font-size: 14px;
+	} 
+	.showmore{
+		margin: 30px auto;
+	}
+	.showmore h3{
+		font-size: 14px;
+		margin-bottom: -10px;
+	}
+	/*-------------------------------------------------------------
+	-----------------------------ADDINFO 2----------------------
+	-------------------------------------------------------------*/
+	.addinfo2{
+		height: auto;
+		background-position: -600px 20px;
+		padding:50px;
+	}
+	/*-------------------------------------------------------------
+	-----------------------------DOWNLOAD NOW--------------------------
+	-------------------------------------------------------------*/ 
+	.downloadnow{
+		padding: 50px;
+		height: 710px;
+	}
+	.downloadnow .konten{
+		margin-top: 0px;
+		display: grid;
+		grid-template-columns: repeat(1,1fr);
+		grid-template-rows: repeat(2,1fr);
+		grid-gap: 10px;
+		padding: 0;
+	}
+	.downloadnow .konten img{
+		width: 300px;
+	}
+	.downloadnow .tulisan{
+		margin: 0 auto;
+	}
+	.downloadnow img{
+		margin: 0 auto;
+	}
+	.DOWNLOADNOW button{
+		size: 12px;
+	}
+	/*-------------------------------------------------------------
+	-----------------------------FOOTER--------------------------
+	-------------------------------------------------------------*/ 
+	footer{
+		height: 70px;
+		color: white;
+		background-color: #2B2B2B;
+		padding: 30px 20px;
+		display: flex;
+		justify-content: space-between;
+		font-size: 11px;
+	}
+	footer img{
+		height: 10px;
+		margin-left: 7px;
+	}
+}
