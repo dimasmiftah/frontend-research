@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Manipulasi Element</title>
+	<style>
+		* {
+			border : 2px solid #dedede;
+			padding: 15px;
+			margin: 15px;
+		}
+		html{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			max-width: 600px;
+			margin: 0 auto;
+			font-family: Sans-serif;
+			color: #333;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="judul">Hello World</h1>
+	<div id="containter">
+		<section id="a">
+			<p class="p1">Paragraf 1</p>
+			<a href="https://instagram.com/dimas.mfth">Instagram Dimas Miftahul Huda</a>
+			<p class="p2">Paragraf 2</p>
+			<p class="p3">Paragraf 3</p>
+		</section>
+		<section id="b">
+			<p>Paragraf 4</p>
+			<ul>
+				<li>item 1</li>
+				<li>item 2</li>
+				<li>item 3</li>
+			</ul>
+		</section>
+	</div>
+<script>
+	//MANIPULASI ELEMENT
+		//element.InnerHTML
+		// const a = document.querySelector('#a');
+		// a.innerHTML = `<p>Hello World!</p>
+		// 				<p>Hello World!</p>
+		// 				<p>Hello World!</p>
+		// 				<p>Hello World!</p>
+		// 				<p>Hello World!</p>`;
+
+		// //element.style.<property>
+		// const judul = document.querySelector('#judul');
+		// judul.style.backgroundColor = 'pink';
+		// judul.style.fontSize = '50px';
+
+		//MENGELOLA ATRIBUT
+			//element.setAttribute()
+			// const judul = document.querySelector('#judul');
+			// judul.setAttribute('name', 'dimas');
+
+			// //element.getAttribute()
+			// const a = document.querySelector('a');
+			// console.log(a.getAttribute('href'));
+
+			// //element.removeAttribute
+			// a.removeAttribute('href');
+
+		//MENGELOLA CLASS
+			// const p2 = document.querySelector('.p2');
+
+			// //element.classList
+			// console.log(p2.classList);
+
+			// //element.classList.add()
+			// p2.classList.add('label');
+			// p2.classList.add('satu');
+			// p2.classList.add('dua');
+			// p2.classList.add('tiga');
+
+			// //element.classList.remove()
+			// p2.classList.remove('label');
+
+			// //element.classList.toggle()
+			// p2.classList.toggle('label');
+
+			// //element.classList.item()
+			// alert(p2.classList.item(2));
+
+			// //element.classList.contains()
+			// alert(p2.classList.contains('tiga'));
+
+			// //element.classList.replace()
+			// alert(p2.classList.replace('tiga','empat'));
+			// alert(p2.classList);
+
+		//MANIPULASI NODE
+			//appendChild
+				//buat elemen baru
+				const pBaru = document.createElement('p');
+				const textPBaru = document.createTextNode('ini paragraf baru');
+				//simpan tulisan ke dalam paragraf
+				pBaru.appendChild(textPBaru);
+				//simpan pBaru di akhir section A
+				const a = document.querySelector('#a');
+				a.appendChild(pBaru);
+
+			//insertBefore
+				//buat elemen baru
+				const liBaru = document.createElement('li');
+				const isiLiBaru = document.createTextNode('ini list baru');
+				//simpan tulisan kedalam li
+				liBaru.appendChild(isiLiBaru);
+				//simpan liBaru sebelum li 2
+				const ul = document.querySelector('ul');
+				const li2 = document.querySelector('li:nth-child(2)');
+				ul.insertBefore(liBaru,li2);
+
+			//remove child
+				const link = document.querySelector('a');
+				a.removeChild(link);
+
+			//replace child
+				//buat elemen baru
+				const h2baru = document.createElement('h2');
+				const isiH2 = document.createTextNode('ini judul baru gais');
+				//simpan tulisan kedalam h2
+				h2baru.appendChild(isiH2);
+				//ganti p4 dengan judul baru
+				const  sectionB = document.querySelector('#b');
+				const p4 = document.querySelector('#b p');
+				sectionB.replaceChild(h2baru, p4)
+
+				//ganti background elemen baru
+				pBaru.style.backgroundColor = 'lightgreen';
+				liBaru.style.backgroundColor = 'lightgreen';
+				h2baru.style.backgroundColor = 'lightgreen';
+
+
+</script>
+</body>
+</html>

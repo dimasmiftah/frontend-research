@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dom Selection</title>
+	<style>
+		* {
+			border : 2px solid #dedede;
+			padding: 15px;
+			margin: 15px;
+		}
+		html{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			max-width: 600px;
+			margin: 0 auto;
+			font-family: Sans-serif;
+			color: #333;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="judul">Hello World</h1>
+	<div id="containter">
+		<section id="a">
+			<p class="p1">Paragraf 1</p>
+			<a href="https://instagram.com/dimas.mfth">Instagram Dimas Miftahul Huda</a>
+			<p class="p2">Paragraf 2</p>
+			<p class="p3" onclick="ubahWarnaP3()">Paragraf 3</p>
+		</section>
+		<section id="b">
+			<p>Paragraf 4</p>
+			<ul>
+				<li>item 1</li>
+				<li>item 2</li>
+				<li>item 3</li>
+			</ul>
+		</section>
+	</div>
+<script>
+	//Event Handler
+		//inline HTML
+		const p3 = document.querySelector('.p3');
+		function ubahWarnaP3 () {
+			p3.style.backgroundColor = 'lightblue';
+		}
+
+		//method
+		const p2 = document.querySelector('.p2');
+		
+		p2.onclick = function ubahWarnaP2 () {
+			p2.style.backgroundColor = 'lightblue';
+		};
+
+	//addEventListener
+	const p4 = document.querySelector('#b p');
+	p4.addEventListener('click', function () {
+		const ul = document.querySelector('ul'); 
+		const liBaru = document.createElement('li');
+		const isiLiBaru = document.createTextNode('ini item baru gais');
+		liBaru.appendChild(isiLiBaru);
+		ul.appendChild(liBaru);
+
+	});
+</script>
+</body>
+</html>

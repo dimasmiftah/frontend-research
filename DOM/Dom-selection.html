@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dom Selection</title>
+	<style>
+		* {
+			border : 2px solid #dedede;
+			padding: 15px;
+			margin: 15px;
+		}
+		html{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			max-width: 600px;
+			margin: 0 auto;
+			font-family: Sans-serif;
+			color: #333;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="judul">Hello World</h1>
+	<div id="containter">
+		<section id="a">
+			<p class="p1">Paragraf 1</p>
+			<a href="https://instagram.com/dimas.mfth">Instagram Dimas Miftahul Huda</a>
+			<p class="p2">Paragraf 2</p>
+			<p class="p3">Paragraf 3</p>
+		</section>
+		<section id="b">
+			<p>Paragraf 4</p>
+			<ul>
+				<li>item 1</li>
+				<li>item 2</li>
+				<li>item 3</li>
+			</ul>
+		</section>
+	</div>
+<script>
+	// DOM Selection
+	//document.getElementBuUd() -> element
+	const judul = document.getElementById('judul');
+	judul.style.color = 'red';
+	judul.style.backgroundColor = 'pink';
+	judul.innerHTML = 'Dimas';		
+
+	//document.getElementsByTagName() -> HTMLCollection
+	const p = document.getElementsByTagName('p');
+	for (let i = 0; i < p.length; i++) {
+		p[i].style.background = 'lightblue';
+	};
+	const h1 = document.getElementsByTagName('h1')[0];
+	h1.style.fontSize = '50px';
+
+	//document.getElementByClassName() -> HTMLCollection
+	const p1 = document.getElementsByClassName('p1');
+	p1[0].innerHTML = 'ini diubah dari javascript';
+
+	//document.querySelector() -> element
+	const p4 = document.querySelector('#b p');
+	p4.style.color = 'green';
+	p4.style.fontSize = '30px';
+
+	const li2 = document.querySelector('#b li:nth-child(2)');
+	li2.style.backgroundColor = 'yellow';
+	
+
+	//document.querySelectorAll() -> NodeList
+	const allP = document.querySelectorAll('p')[3];
+	allP.innerHTML= 'Ini diubah dari javascript';
+
+	//node root
+	const sectionB = document.getElementById('b');
+	const empat = sectionB.getElementsByTagName('p')[0];
+	empat.style.color = 'red';
+</script>
+</body>
+</html>
