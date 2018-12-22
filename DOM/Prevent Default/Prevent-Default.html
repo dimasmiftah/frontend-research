@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Prevent Default</title>
+	<style>
+		body{
+			margin: 50px;
+			font-family: arial;
+			background-color: #666;
+		}
+		.container{
+			width: 900px;
+			margin: auto;
+		}
+		.card{
+			display: inline-block;
+			width: 220px;
+			padding: 0 80px;
+			height: 80px;
+			font-size: 16px;
+			line-height: 80px;
+			border-radius: 40px;
+			background-color: #f1f1f1;
+			margin: 20px;
+			position: relative;
+			text-align: center;
+		}
+		.card img{
+			float: left;
+			margin: 0 10px 0 -80px;
+			height: 80px;
+			width: 80px;
+			border-radius: 50%;
+			position: relative;
+		}
+		.card .nama, .card .telp{
+			display: block;
+			line-height: 20px;
+			padding: 0 5px;
+			font-weight: bold;
+			text-align: center;
+		}
+		.nama {
+			margin-top: 20px;
+		}
+		.telp{
+			font-weight: lighter;
+			color: grey;
+		}
+		.close{
+			float: right;
+			display: block;
+			margin-top: -60px;
+			margin-right: -30px;
+			font-weight: bold;
+			color: red;
+			font-size: 22px;
+			cursor: pointer;
+			height: 10px;
+			width: 10px;
+		}
+		.close:hover{
+			color: grey;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="card">
+			<img src="dimas.jpeg" width="96px" alt="Dimas ganteng">
+			<span class="nama">Dimas Miftahul Huda</span>
+			<span class="telp">081563589033</span>
+			<a href="" class="close">x</a>
+		</div>
+		<div class="card">
+			<img src="dimas.jpeg" width="96px" alt="Dimas ganteng">
+			<span class="nama">Dimas Miftahul Huda</span>
+			<span class="telp">081563589033</span>
+			<a href="" class="close">x</a>
+		</div>
+		<div class="card">
+			<img src="dimas.jpeg" width="96px" alt="Dimas ganteng">
+			<span class="nama">Dimas Miftahul Huda</span>
+			<span class="telp">081563589033</span>
+			<a href="" class="close">x</a>
+		</div>
+		<div class="card">
+			<img src="dimas.jpeg" width="96px" alt="Dimas ganteng">
+			<span class="nama">Dimas Miftahul Huda</span>
+			<span class="telp">081563589033</span>
+			<a href="" class="close">x</a>
+		</div>
+	</div>
+<script>
+	const close = document.querySelectorAll('.close');
+	close.forEach(function  (el) {
+		el.addEventListener('click', function  (e) {
+			e.target.parentElement.style.display = 'none';
+			e.preventDefault();
+		})
+	})
+</script>
+</body>
+</html>
