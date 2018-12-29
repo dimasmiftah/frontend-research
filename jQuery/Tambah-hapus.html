@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tambah dan Hapus</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1>Belajar jQuery</h1>
+	<div id="box1">Box 1</div>
+
+	<div class="boxwrap">
+		<div class="boxes">Baris pertama</div>
+		<div class="boxes">Baris kedua</div>
+		<div class="boxes">Baris ketiga</div>	
+		<div class="boxes">Baris keempat</div>	
+	</div>
+
+	<form action="">
+		<input type="text" id="inputText">
+		<input type="submit">
+	</form>
+	<button>HTML</button>
+	<button id="rubah">Rubah HTML</button>
+
+	<script>
+		jQuery(document).ready(function($) {
+			//Tambah elemen 
+			// append, prepend || before, after
+			$('.boxwrap').append('<h1>akhir</h1>');
+			$('.boxwrap').prepend('<h1>awal</h1>');
+			$('.boxes:eq(0)').after('<h1>sesudah</h1>');
+			$('.boxes:eq(2)').before('<h1>sebelum</h1>');
+			
+			//Hapus elemen
+			//Remove, Empty
+			// $('.boxwrap').remove();
+			$('.boxwrap').empty();
+		});
+	</script>	
+</body>
+</html>

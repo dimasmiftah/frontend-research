@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Children and Parent</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>Belajar</li>
+			<li>html</li>
+			<li class="css">CSS</li>
+			<li>jquery</li>
+			<li>database</li>
+			<li>Belajar</li>
+			<li class="html">html</li>
+		</ul>
+	</div>
+
+	<script>
+		jQuery(document).ready(function($) {
+			//children, find, parent, parents, parentsUntil
+
+			// $('ul').children().css('color', 'red');
+			// $('ul').find('.css').css('color', 'red');
+			// $('ul').parent().css('background', 'red');
+			// $('ul').parents().css('border', '2px solid red');
+			$('li').parentsUntil('body').css('border', '2px solid red');
+		});
+	</script>
+</body>
+</html>

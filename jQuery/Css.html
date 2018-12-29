@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS</title>
+	<style>
+		.class{
+			color: red;
+			background: grey;
+			font-size: 40px;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1>Belajar jQuery</h1>
+	<div id="box1">Box 1</div>
+
+	<div class="boxwrap">
+		<div class="boxes">Baris pertama</div>
+		<div class="boxes">Baris kedua</div>
+		<div class="boxes">Baris ketiga</div>	
+		<div class="boxes">Baris keempat</div>	
+	</div>
+
+	<form action="">
+		<input type="text" id="inputText">
+		<input type="submit">
+	</form>
+	<button class="tambah">tambah class</button>
+	<button class="hapus">hapus class</button>
+	<button class="toggle">toggle class</button>
+
+	<script>
+		//Multiple css, addClass, removeClass, toggleClass
+		jQuery(document).ready(function($) {
+			$('.tambah').click(function(event) {
+
+				// $('h1').css({
+				// 	color: 'pink',
+				// 	fontSize: '40px'
+				// });
+				$('h1').addClass('class');
+			});
+
+			$('.hapus').click(function(event) {
+					$('h1').removeClass('class');
+			});
+
+			$('.toggle').click(function(event) {
+					$('h1').toggleClass('class');
+			});
+		});
+	</script>	
+</body>
+</html>

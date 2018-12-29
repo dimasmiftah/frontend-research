@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Show dan Hide</title>
+	<style>
+		#box1{
+			background: grey;
+			width: 100px;
+			height: 100px;
+			margin-bottom: 20px;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1>Belajar jQuery</h1>
+	<div id="box1">Box 1</div>
+
+	<button class="show">show</button>
+	<button class="hide">hide</button>
+	<button class="toggle">toggle</button>
+
+	<script>
+		jQuery(document).ready(function($) {
+			//show, hide, toggle
+			// $('.show').click(function(event) {
+			// 	$('#box1').show();
+			// });
+			// $('.hide').click(function(event) {
+			// 	$('#box1').hide();
+			// });
+			// $('.toggle').click(function(event) {
+			// 	$('#box1').toggle();
+			// });
+
+			//fadeIn, fadeOut, fadeTo(time, opacity), fadeToggle
+			// $('.show').click(function(event) {
+			// 	$('#box1').fadeIn();
+			// });
+			// $('.hide').click(function(event) {
+			// 	$('#box1').fadeOut();
+			// });
+			// $('.toggle').click(function(event) {
+			// 	$('#box1').fadeTo(1000, .5);
+			// });
+			// $('.toggle').click(function(event) {
+			// 	$('#box1').fadeToggle(1000);
+			// });
+
+			//show, hide, toggle
+			$('.show').click(function(event) {
+				$('#box1').slideDown();
+			});
+			$('.hide').click(function(event) {
+				$('#box1').slideUp();
+			});
+			$('.toggle').click(function(event) {
+				$('#box1').slideToggle();
+			});
+		});
+	</script>	
+</body>
+</html>

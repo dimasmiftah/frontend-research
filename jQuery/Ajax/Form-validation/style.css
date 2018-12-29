@@ -1,0 +1,36 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #cbcbcb;
+	text-align: center;
+	padding: 200px;
+}
+input,button,textarea,select{
+	height: 40px;
+	width: 350px;
+	margin-bottom: 15px;
+	border: none;
+	border-radius: 5px;
+	padding: 12px;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+textarea{
+	height: 150px;
+}
+button{
+	background-color: #242424;
+	color: white;
+	font-weight: bold;
+}
+.input-error{
+	border : 2px solid red;
+}
+.form-error{
+	color: red;
+}
+.form-success{
+	color: green;
+}

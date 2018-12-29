@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Event</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1>Belajar jQuery</h1>
+	<div id="box1">Box 1</div>
+	<div class="boxes">Baris pertama</div>
+	<div class="boxes">Baris kedua</div>
+	<div class="boxes">Baris ketiga</div>	
+	<div class="boxes">Baris keempat</div>	
+
+	<script>
+		jQuery(document).ready(function($) {
+
+			$('h1').click(function(event) {
+				$('h1').css('color', 'red');
+			});
+
+			$('h1').mouseenter(function(event) {
+				$('h1').css('color', 'green');
+			});
+
+			$('h1').mouseleave(function(event) {
+				$('h1').css('color', 'blue');
+			});
+
+			$('.boxes').mouseenter(function(event) {
+				$(this).css('color', 'pink'); 
+			});
+			$('.boxes').mouseleave(function(event) {
+				$(this).css('color', 'blue'); 
+			});
+		});
+	</script>	
+</body>
+</html>

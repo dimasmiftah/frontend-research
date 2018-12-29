@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Traversing</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<ul>
+		<li>Belajar</li>
+		<li>html</li>
+		<li class="css">CSS</li>
+		<li>jquery</li>
+		<li>database</li>
+	</ul>
+
+	<script>
+		jQuery(document).ready(function($) {
+			$('li').first().css('color', 'pink');
+			$('li').last().css('color', 'pink');
+			$('li').eq(2).css('color', 'pink');
+			
+			$('li').filter('.css').css('background', 'red');
+			$('li').not('.css').css('fontSize', '30px');
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Karla', sans-serif;
+}
+body{
+	background-color: #ccc;
+}
+.content{
+	width: 600px;
+	min-height: 70px;
+	background-color: white;
+	margin: 30px auto;
+	font-size: 16px;
+	padding: 20px;
+}
+.btn{
+	margin: 0 auto;
+	height: 40px;
+	width: 200px;
+	background-color: #333;
+	color: white;
+	cursor: pointer;
+	font-size: 14px;
+	display: block;
+}
