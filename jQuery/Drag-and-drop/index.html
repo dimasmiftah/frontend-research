@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Drag and Drop</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	
+	<style>
+		*{
+			margin: 0;
+			padding: 0;	
+		}
+		.kiri{
+			background-color: lightblue;
+		}
+		.kanan{
+			background-color: pink;
+		}
+		.kiri,.kanan{
+			padding: 0 20px;
+		}
+		.bungkus{
+			display: grid;
+			grid-template-columns: 3fr 9fr;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			top: 12%;
+		}
+		h3{
+			border: 1px solid;
+			padding: 5px;
+			border-radius: 5px;
+			box-sizing: border-box;
+		}
+		h1{
+			margin-left: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Drag and Drop Tools Onto Canvas</h1>
+	<div class="bungkus">
+		<div class="kiri">
+			<h2>Tools</h2>
+			<h3 class="tool-1">Tool 1</h3>
+			<h3 class="tool-2">Tool 2</h3>
+			<h3 class="tool-3">Tool 3</h3>
+		</div>
+		<div class="kanan">
+			<h1>Canvas</h1>
+		</div>
+	</div>
+<script>
+	jQuery(document).ready(function($) {
+		var diagram = [];
+		var canvas = $('.kanan');
+		$('h3').draggable({
+			helper: "clone"
+		});
+		canvas.droppable({
+			drop: function (event,ui) {
+				var node = {
+					_id: (new Date).getTime(),
+					position: ui.helper.position()
+				};
+				if (ui.helper.hasClass('tool-1')) {
+					node.type = "tool-1";
+				}else if (ui.helper.hasClass('tool-2')) {
+					node.type = "tool-2";
+				}else if (ui.helper.hasClass('tool-3')) {
+					node.type = "tool-3";
+				} else {
+					return;
+				};
+				diagram.push(node);
+				renderDiagram(diagram);
+;			}
+			
+		});
+		function renderDiagram (diagram) {
+			canvas.empty();
+			for(var d in diagram){
+				var node = diagram[d];
+				var html = "";
+				if (node.type == "tool-1") {
+					html = '<h3>Tool 1</h3>';
+				}else if (node.type == "tool-2") {
+					html = '<h3>Tool 2</h3>';
+				}else if (node.type == "tool-3") {
+					html = '<h3>Tool 3</h3>';
+				};
+				var dom = $(html).css({
+					position: 'absolute',
+					top: node.position.top,
+					left: node.position.left
+				}).draggable({
+					stop: function (event, ui) {
+						var id = ui.helper.attr('id');
+						for(var i in diagram) {
+							if (diagram[i]._id == id) {
+								diagram[i].position.top = ui.position.top;
+								diagram[i].position.left = ui.position.left;
+							};
+						}
+					}
+				}).attr('id', node._id);
+				canvas.append(dom);
+			}
+		}
+	});
+</script>
+</body>
+</html>
