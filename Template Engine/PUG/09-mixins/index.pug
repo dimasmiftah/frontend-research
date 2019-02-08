@@ -1,0 +1,31 @@
+mixin comment(commentData)
+    .comments
+        if commentData.postedbyadmin
+            .admin posted by admin
+        .date= commentData.date
+        .author= commentData.author
+        .text= commentData.text
+doctype html
+html
+    head
+        title Mixins
+        style.
+            .comments{
+                width: 250px;
+                padding: 10px;
+                font-family: sans-serief;
+                line-height: 1.5;
+                border: 1px solid #555;
+            }
+            .date{
+                font-size: 85%;
+            }
+            .author{
+                font-size: 110%;
+                font-weight: bold;
+            }
+    body
+        -const c = {date: '27-01-2019', author: 'Dimas', text: 'Hello, nice info gan', postedbyadmin: false}
+        +comment(c)
+        -const d = {date: '01-06-2019', author: 'Cika', text: 'Hmmm, biasa aja gan', postedbyadmin: true}
+        +comment(d)
